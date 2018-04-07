@@ -1,6 +1,11 @@
-@extends('layouts.app')
-
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+	<title>Document</title>
+</head>
+<body>
 	<form action="">
 		@csrf
 		<input type="text" placeholder="title" name="title">
@@ -35,4 +40,6 @@
 	 	})
 	 });
 </script>
-@endsection
+	
+</body>
+</html>

@@ -31,14 +31,14 @@ class HomeController extends Controller
         return view('home',compact('blog','user'));
     }
 
-    public function getBlogList(){
+    protected function getBlogList(){
         return $blog = Blog::orderBy('id', 'desc')->paginate(3);
     }
-    public function getBlogDetail($id){
+    protected function getBlogDetail($id){
         return $blog = Blog::where('id',$id)->first();
     }
 
-    public function getUserDetail(){
+    protected function getUserDetail(){
         return $user = User::all();
     }
 
