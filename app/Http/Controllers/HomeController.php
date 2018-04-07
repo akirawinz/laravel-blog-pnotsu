@@ -53,7 +53,6 @@ class HomeController extends Controller
         $blog->content = $request->content;
         $blog->authorid = Auth::id();
         $blog->save();
-
         return  response()->json(['status' => 'success'],200);
     }
 
